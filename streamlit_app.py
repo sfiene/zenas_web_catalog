@@ -1,4 +1,4 @@
-import streamlit as sl
+import streamlit
 import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
@@ -8,4 +8,4 @@ my_data_row = my_cur.fetchone()
 streamlit.text("Hello from Snowflake:")
 streamlit.text(my_data_row)
 
-sl.title('My Parents New Healthy Diner')
+streamlit.title('My Parents New Healthy Diner')
